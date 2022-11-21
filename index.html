@@ -1,0 +1,79 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Image slider</title>
+     <style>
+          *{
+               box-sizing: border-box;
+               margin: 0%;
+               padding: 0%;
+          }
+          .box{
+               width: 50vw;
+               height: 50vh;
+               background-color: bisque;
+               display: flex;
+               flex-direction: column;
+               margin: auto;
+               margin-top: 10%;
+           }
+          img{
+               width: 300px;
+               height: 300px;
+                z-index: 1;
+               
+          }
+          .images{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+          }
+          #next{
+               float: right;
+          }
+          #prev{
+               float: left;
+          }
+          .images img{
+             display:none;
+          }
+          
+     </style>
+</head>
+<body>
+     <div class="box">
+          <div class="buttons">
+               <button id="prev">Previous</button>
+               <button id="next">Next</button>
+            </div>
+            <div class="images"> 
+        <img src="./images/sea.jpg" id="img1"> 
+          <img src="./images/sunrise.jpg" id="img1"> 
+                <img src="./images/sunset.jpg" id="img1"> 
+                      <img src="./images/tree.jpg" id="img1"> 
+                        <img src="./images/woman.jpg" id="img1">
+            </div> 
+     </div>
+     <script>
+          let next = document.getElementById('next');
+          let prev = document.getElementById('prev');
+          let images = document.querySelectorAll('#img1');
+          let img=document.querySelector('img');
+          let i=1;
+         next.onclick=function(){
+          img.style.display='flex'
+          img.innerHTML=images[1];
+        
+          
+         }
+         prev.onclick=function(){
+
+         }
+ 
+</script>
+</body>
+</html>
